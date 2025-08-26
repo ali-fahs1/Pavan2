@@ -42,7 +42,6 @@ def get_urls():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name('cred/credentials.json', scope)
     client = gspread.authorize(creds)
-
     sheet = client.open_by_key('15vZVl3QDmX0C-bpfr594Q_76rTv2UpXch8fHtDi8iyo')
     worksheet=sheet.worksheet("Input")
     sheet.worksheet("Output").clear()
@@ -51,9 +50,6 @@ def get_urls():
 
 
 def get_data_from_claude(description):
-
-
-
     return description
 
 def save_data(url,data_from_ai):
