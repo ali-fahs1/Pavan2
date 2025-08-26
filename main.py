@@ -46,8 +46,7 @@ def get_urls():
     sheet = client.open_by_key('15vZVl3QDmX0C-bpfr594Q_76rTv2UpXch8fHtDi8iyo')
     worksheet=sheet.worksheet("Input")
     sheet.worksheet("Output").clear()
-    # return worksheet.col_values(1)
-    return worksheet.col_values(21)
+    return worksheet.col_values(1)
 
 
 
