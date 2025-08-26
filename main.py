@@ -43,8 +43,7 @@ def get_urls():
     creds = ServiceAccountCredentials.from_json_keyfile_name('cred/credentials.json', scope)
     client = gspread.authorize(creds)
 
-    # sheet = client.open_by_key('1itCV2flmfxOZGSQTS77WtuMX_Uo13DqvfASgZYCF-64')
-    sheet = client.open_by_key('1yaQtZHmCq0lVMm4EPJF-m5Ic2V1RPnVMePH2DOI7BhQ')
+    sheet = client.open_by_key('15vZVl3QDmX0C-bpfr594Q_76rTv2UpXch8fHtDi8iyo')
     worksheet=sheet.worksheet("Input")
     sheet.worksheet("Output").clear()
     # return worksheet.col_values(1)
